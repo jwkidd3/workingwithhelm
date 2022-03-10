@@ -1,0 +1,27 @@
+{
+  "name": "working-with-helm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DevelopIntelligenceBoulder/Working-with-Helm.git"
+  },
+  "keywords": [
+    "helm"
+  ],
+  "author": "= <=>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DevelopIntelligenceBoulder/Working-with-Helm/issues"
+  },
+  "homepage": "https://github.com/DevelopIntelligenceBoulder/Working-with-Helm#readme",
+  "dependencies": {
+    "highlight": "^0.2.4",
+    "pygments": "^0.2.1",
+    "reveal.js": "^3.9.2"
+  }
+}

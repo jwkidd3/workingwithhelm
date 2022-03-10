@@ -1,0 +1,7 @@
+dependencies:
+- name: minio
+  version: "7.0.2"
+  repository: https://helm.min.io/
+  tags:
+    - minio
+    - local-storage

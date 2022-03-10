@@ -1,0 +1,17 @@
+# CHART_PATH/tests/deployment_test.yaml
+suite: test my deployment
+templates:
+  - deployment.yaml
+tests:
+  - it: should be a Deployment
+    asserts:
+      - isKind:
+          of: Deployment
+      - equal:
+          path: spec.template.spec.containers[0].name
+          value: hello-world
+      - matchRegex:
+          path: spec.template.spec.containers[0].image
+          pattern: lwander
+      - matchSnapshot:
+          path: spec.template.spec.containers[0].ports

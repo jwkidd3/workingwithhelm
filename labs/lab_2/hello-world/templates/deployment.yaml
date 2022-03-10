@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: righteous-wave-hello-world
+  labels:
+    app.kubernetes.io/name: hello-world
+    helm.sh/chart: hello-world-0.1.0
+    app.kubernetes.io/instance: righteous-wave
+    app.kubernetes.io/managed-by: Helm
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: hello-world
+      app.kubernetes.io/instance: righteous-wave
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: hello-world
+        app.kubernetes.io/instance: righteous-wave
+    spec:
+      containers:
+        - name: hello-world
+          image: "hashicorp/http-echo"
+          args:
+            - "-text=helloworld"
+          imagePullPolicy: IfNotPresent
+          ports:
+            - name: http
+              containerPort: 5678
+              protocol: TCP
